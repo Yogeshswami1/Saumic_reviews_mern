@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import { FaTrash } from 'react-icons/fa';
+import * as XLSX from 'xlsx';
 
 const DashboardContainer = styled.div`
   padding: 2rem;
@@ -87,6 +88,21 @@ const FilterButton = styled.button`
     background-color: #ff4c4c;
   }
 `;
+const ExportButton = styled.button`
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ff4c4c;
+  }
+`;
 
 const Dashboard = () => {
   const [reviews, setReviews] = useState([]);
@@ -134,10 +150,17 @@ const Dashboard = () => {
 
     setFilteredReviews(filtered);
   };
-
+  const exportToExcel = () => {
+    const worksheet = XLSX.utils.json_to_sheet(reviews);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Reviews");
+    XLSX.writeFile(workbook, "Reviews.xlsx");
+  };
   return (
     <DashboardContainer>
       <h2>Review Dashboard</h2>
+    <ExportButton onClick={exportToExcel}>Export to Excel</ExportButton>
+
       <FilterContainer>
         <Dropdown value={filterRating} onChange={(e) => setFilterRating(e.target.value)}>
           <option value="">Filter by Rating</option>
@@ -175,3 +198,133 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+
+// src/components/Dashboard.js
+// import React, { useEffect, useState } from 'react';
+// import axios from 'axios';
+// import styled from 'styled-components';
+// import { FaTrash } from 'react-icons/fa';
+// import * as XLSX from 'xlsx';
+
+// const DashboardContainer = styled.div`
+//   padding: 2rem;
+//   background-color: #f0f2f5;
+//   min-height: 100vh;
+// `;
+
+// const GridContainer = styled.div`
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+//   gap: 1rem;
+
+//   @media (max-width: 768px) {
+//     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+//   }
+
+//   @media (max-width: 480px) {
+//     grid-template-columns: 1fr;
+//   }
+// `;
+
+// const ReviewCard = styled.div`
+//   background-color: #fff;
+//   padding: 1.5rem;
+//   border: 1px solid #ccc;
+//   border-radius: 8px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   position: relative;
+// `;
+
+// const ReviewTitle = styled.h3`
+//   margin: 0 0 0.5rem;
+//   font-size: 1.25rem;
+//   color: #333;
+// `;
+
+// const ReviewText = styled.p`
+//   margin: 0.25rem 0;
+//   color: #555;
+// `;
+
+// const DeleteButton = styled.button`
+//   position: absolute;
+//   top: 1rem;
+//   right: 1rem;
+//   background: none;
+//   border: none;
+//   cursor: pointer;
+//   color: #ff4c4c;
+//   font-size: 1.2rem;
+
+//   &:hover {
+//     color: #ff1a1a;
+//   }
+// `;
+
+// const ExportButton = styled.button`
+//   padding: 0.75rem 1.5rem;
+//   margin-bottom: 1rem;
+//   border: none;
+//   border-radius: 4px;
+//   background-color: #333;
+//   color: #fff;
+//   font-size: 1rem;
+//   cursor: pointer;
+//   transition: background-color 0.3s ease;
+
+//   &:hover {
+//     background-color: #ff4c4c;
+//   }
+// `;
+
+// const Dashboard = () => {
+//   const [reviews, setReviews] = useState([]);
+
+//   useEffect(() => {
+//     axios.get('http://localhost:8000/api/reviews')
+//       .then(response => setReviews(response.data))
+//       .catch(error => console.error('Error fetching reviews:', error));
+//   }, []);
+
+//   const handleDelete = (id) => {
+//     axios.delete(`http://localhost:8000/api/reviews/${id}`)
+//       .then(response => {
+//         console.log(response.data);
+//         setReviews(reviews.filter(review => review._id !== id));
+//       })
+//       .catch(error => console.error('Error deleting review:', error));
+//   };
+
+//   const exportToExcel = () => {
+//     const worksheet = XLSX.utils.json_to_sheet(reviews);
+//     const workbook = XLSX.utils.book_new();
+//     XLSX.utils.book_append_sheet(workbook, worksheet, "Reviews");
+//     XLSX.writeFile(workbook, "Reviews.xlsx");
+//   };
+
+//   return (
+//     <DashboardContainer>
+//       <h2>Review Dashboard</h2>
+//       <ExportButton onClick={exportToExcel}>Export to Excel</ExportButton>
+//       <GridContainer>
+//         {reviews.map((review, index) => (
+//           <ReviewCard key={index}>
+//             <ReviewTitle>{review.name}</ReviewTitle>
+//             <ReviewText><strong>Email:</strong> {review.email}</ReviewText>
+//             <ReviewText><strong>Phone:</strong> {review.phoneNumber}</ReviewText>
+//             <ReviewText><strong>Rating:</strong> {review.rating}</ReviewText>
+//             <ReviewText><strong>Description:</strong> {review.description}</ReviewText>
+//             <ReviewText><strong>TLName:</strong> {review.tlName}</ReviewText>
+
+//             <DeleteButton onClick={() => handleDelete(review._id)}>
+//               <FaTrash />
+//             </DeleteButton>
+//           </ReviewCard>
+//         ))}
+//       </GridContainer>
+//     </DashboardContainer>
+//   );
+// };
+
+// export default Dashboard;
