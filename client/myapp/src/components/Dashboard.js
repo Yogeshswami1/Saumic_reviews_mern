@@ -120,7 +120,7 @@ const Dashboard = () => {
   ];
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/reviews')
+    axios.get('https://reviews.api.saumic.com/api/reviews')
       .then(response => {
         setReviews(response.data);
         setFilteredReviews(response.data);
@@ -129,7 +129,7 @@ const Dashboard = () => {
   }, []);
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:8000/api/reviews/${id}`)
+    axios.delete(`https://reviews.api.saumic.com/api/reviews/${id}`)
       .then(response => {
         setFilteredReviews(filteredReviews.filter(review => review._id !== id));
         setReviews(reviews.filter(review => review._id !== id));

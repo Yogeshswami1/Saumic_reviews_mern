@@ -546,7 +546,7 @@ const Review = () => {
     }
 
     axios
-      .post('http://localhost:8000/api/reviews', {
+      .post('https://reviews.api.saumic.com/api/reviews', {
         name,
         email,
         phoneNumber,

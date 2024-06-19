@@ -38,7 +38,7 @@ const ReviewsDashboard = () => {
   }, []);
 
   const fetchReviews = () => {
-    axios.get('http://localhost:8000/api/reviews')
+    axios.get('https://reviews.api.saumic.com/api/reviews')
       .then(response => {
         setReviews(response.data);
       })
@@ -49,7 +49,7 @@ const ReviewsDashboard = () => {
 
   const handleDeleteReview = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/reviews/${id}`);
+      await axios.delete(`https://reviews.api.saumic.com/api/reviews/${id}`);
       fetchReviews(); // Refresh reviews after deletion
     } catch (error) {
       console.error('Error deleting review:', error);
