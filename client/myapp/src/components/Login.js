@@ -53,7 +53,7 @@ const Login = ({ setAuthenticated }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (username === 'admin' && password === 'password') {
+    if (username === 'Saumic' && password === 'Rj45cd@1400') {
       setAuthenticated(true);
       navigate('/dashboard');
     } else {

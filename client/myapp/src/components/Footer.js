@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 const footerStyles = {
   footer: {
     background: '#000',
@@ -109,7 +110,7 @@ const Footer = () => {
             <Link to="/margins" style={footerStyles.footerLink}>Margins</Link>
           </div>
         </div>
-        <div style={footerStyles.footerColumn}>
+        {/* <div style={footerStyles.footerColumn}>
           <h3 style={footerStyles.footerColumnHeading}>Newsletter</h3>
           <div style={footerStyles.newsletter}>
             <form onSubmit={handleFormSubmit}>
@@ -128,16 +129,14 @@ const Footer = () => {
             </form>
             {message && <p style={{ color: '#fff', marginTop: '10px' }}>{message}</p>}
           </div>
-        </div>
-        <div style={footerStyles.footerColumn}>
-          <h3 style={footerStyles.footerColumnHeading}>Follow Us</h3>
-          <div style={footerStyles.socialIcons}>
-            <a href="#" style={footerStyles.socialIcon}>&#x1F426;</a> {/* Twitter Icon */}
-            <a href="#" style={footerStyles.socialIcon}>&#x1F464;</a> {/* Facebook Icon */}
-            <a href="#" style={footerStyles.socialIcon}>&#x1F4F7;</a> {/* Instagram Icon */}
-            <a href="#" style={footerStyles.socialIcon}>&#x1F4F2;</a> {/* LinkedIn Icon */}
-          </div>
-        </div>
+        </div> */}
+              <div style={footerStyles.footerColumn}>
+  <h3 style={footerStyles.footerColumnHeading}>Follow Us</h3>
+  <div style={footerStyles.socialIcons}>
+  <a href="https://www.instagram.com/saumic_craft_/" target="_blank" style={footerStyles.socialIcon}>
+          <FontAwesomeIcon icon={faInstagram} />
+        </a>  </div>
+</div>
       </div>
       <div style={footerStyles.copyright}>
         &copy; All rights reserved

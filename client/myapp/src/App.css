@@ -276,3 +276,14 @@ h2, h3 {
   height: 562px;
 }
 
+.customer-feedback .slick-list {
+  overflow: visible; /* Allow visibility of partially shown slides */
+}
+
+.customer-feedback .slick-slide {
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+}
+
+.customer-feedback .slick-center img {
+  transform: scale(1.1); /* Slightly enlarge the center image for emphasis */
+}

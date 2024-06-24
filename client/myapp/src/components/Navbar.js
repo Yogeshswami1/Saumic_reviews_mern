@@ -19,6 +19,7 @@ const NavbarContainer = styled.nav`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+     
   }
 `;
 
@@ -41,11 +42,11 @@ const NavLinks = styled.ul`
   display: flex;
   gap: 1rem;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    display: ${props => (props.show ? 'flex' : 'none')}; /* Toggle display */
-  }
+  // @media (max-width: 768px) {
+  //   flex-direction: column;
+  //   align-items: center;
+  //   display: ${props => (props.show ? 'flex' : 'none')}; /* Toggle display */
+  // }
 `;
 
 const NavLink = styled(Link)`
@@ -87,10 +88,8 @@ const Navbar = () => {
         <Logo>
           <LogoImage src="https://saumiccraft.com/wp-content/uploads/2023/06/S-C-Logo-300x205.png" alt="MyApp Logo" />
         </Logo>
-        <ToggleButton onClick={handleToggle}>
-          ☰ {/* This is the hamburger icon */}
-        </ToggleButton>
-        <NavLinks show={showNavLinks}>
+     
+        <NavLinks show={showNavLinks} style={{marginLeft:"-2rem"}}>
           <NavLink to="/home">Home</NavLink>
           <NavLink to="/about">About us</NavLink>
           <NavLink to="/margins">Margins</NavLink>
@@ -101,7 +100,7 @@ const Navbar = () => {
       <ReviewPage />
       <CustomerFeedback />
       <CaseStudyPage />
-      <h1>Review Us</h1>
+     
       <Review/>
       <Footer />
     </>

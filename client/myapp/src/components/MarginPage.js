@@ -222,11 +222,11 @@ const NavLinks = styled.ul`
   display: flex;
   gap: 1rem;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    display: ${props => (props.show ? 'flex' : 'none')}; /* Toggle display */
-  }
+  // @media (max-width: 768px) {
+  //   flex-direction: column;
+  //   align-items: center;
+  //   display: ${props => (props.show ? 'flex' : 'none')}; /* Toggle display */
+  // }
 `;
 
 const NavLink = styled.li`
@@ -328,9 +328,7 @@ const MarginPage = () => {
   return (
     <>
       <NavbarContainer>
-        <ToggleButton onClick={handleToggle}>
-          ☰ {/* This is the hamburger icon */}
-        </ToggleButton>
+       
         <Logo>
           <LogoImage src="https://saumiccraft.com/wp-content/uploads/2023/06/S-C-Logo-300x205.png" alt="MyApp Logo" />
         </Logo>
