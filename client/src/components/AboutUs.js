@@ -160,7 +160,7 @@ const AboutUs = () => {
           ☰ {/* This is the hamburger icon */}
         </ToggleButton>
         <Logo>
-          <LogoImage src="https://saumiccraft.com/wp-content/uploads/2023/06/S-C-Logo-300x205.png" alt="MyApp Logo" />
+          <LogoImage src="https://saumiccraft.com/wp-content/uploads/2024/06/S-C-Logo-1.png" alt="MyApp Logo" />
         </Logo>
         <NavLinks show={showNavLinks}>
           <NavLink to="/home" onClick={handleToggle}>

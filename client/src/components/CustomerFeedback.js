@@ -7,49 +7,42 @@ const CustomerFeedback = () => {
             <h1>Customer Feedback</h1>
             <div className="feedback-slider">
                 <div className="feedback-slide">
-                    <img src="https://saumiccraft.com/wp-content/uploads/2023/07/wp1-461x1024.jpg" alt="Customer Feedback Image 1" />
+                    <img src="https://saumiccraft.com/wp-content/uploads/2024/07/scscscc.jpg" alt="Customer Feedback Image 1" />
                     {/* <p>Customer feedback text goes here.</p> */}
                 </div>
                 <div className="feedback-slide">
-                    <img src="https://saumiccraft.com/wp-content/uploads/2023/07/wp4-461x1024.jpg" alt="Customer Feedback Image 2" />
+                    <img src="https://saumiccraft.com/wp-content/uploads/2024/07/hfhg.jpg" alt="Customer Feedback Image 2" />
                     {/* <p>Customer feedback text goes here.</p> */}
                 </div>
                 <div className="feedback-slide">
-                    <img src="https://saumiccraft.com/wp-content/uploads/2023/07/wp4-461x1024.jpg" alt="Customer Feedback Image 2" />
+                    <img src="https://saumiccraft.com/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-11-at-18.54.48_feb45d38.jpg" alt="Customer Feedback Image 2" />
                     {/* <p>Customer feedback text goes here.</p> */}
                 </div>
                 <div className="feedback-slide">
-                    <img src="https://saumiccraft.com/wp-content/uploads/2023/07/wp1-461x1024.jpg" alt="Customer Feedback Image 2" />
+                    <img src="https://saumiccraft.com/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-11-at-18.54.48_241bfc3b.jpg" alt="Customer Feedback Image 2" />
                     {/* <p>Customer feedback text goes here.</p> */}
                 </div>
                 <div className="feedback-slide">
-                    <img src="https://saumiccraft.com/wp-content/uploads/2023/07/wp1-461x1024.jpg" alt="Customer Feedback Image 2" />
+                    <img src="https://saumiccraft.com/wp-content/uploads/2024/07/saxsdwd.jpg" alt="Customer Feedback Image 2" />
                     {/* <p>Customer feedback text goes here.</p> */}
                 </div>
                 <div className="feedback-slide">
-                    <img src="https://saumiccraft.com/wp-content/uploads/2023/07/wp2-461x1024.jpg" alt="Customer Feedback Image 2" />
+                    <img src="https://saumiccraft.com/wp-content/uploads/2024/07/saxa.jpg" alt="Customer Feedback Image 2" />
                     {/* <p>Customer feedback text goes here.</p> */}
                 </div>
                 <div className="feedback-slide">
-                    <img src="https://saumiccraft.com/wp-content/uploads/2023/07/wp1-461x1024.jpg" alt="Customer Feedback Image 2" />
+                    <img src="https://saumiccraft.com/wp-content/uploads/2024/07/qsqxq.jpg" alt="Customer Feedback Image 2" />
                     {/* <p>Customer feedback text goes here.</p> */}
                 </div>
                 <div className="feedback-slide">
-                    <img src="https://saumiccraft.com/wp-content/uploads/2023/07/wp3-461x1024.jpg" alt="Customer Feedback Image 2" />
+                    <img src="https://saumiccraft.com/wp-content/uploads/2024/07/sqwxw.jpg" alt="Customer Feedback Image 2" />
                     {/* <p>Customer feedback text goes here.</p> */}
                 </div>
                 <div className="feedback-slide">
-                    <img src="https://saumiccraft.com/wp-content/uploads/2023/07/wp1-461x1024.jpg" alt="Customer Feedback Image 2" />
+                    <img src="https://saumiccraft.com/wp-content/uploads/2024/07/edcsc.jpg" alt="Customer Feedback Image 2" />
                     {/* <p>Customer feedback text goes here.</p> */}
                 </div>
-                <div className="feedback-slide">
-                    <img src="https://saumiccraft.com/wp-content/uploads/2023/07/wp1-461x1024.jpg" alt="Customer Feedback Image 2" />
-                    {/* <p>Customer feedback text goes here.</p> */}
-                </div>
-                <div className="feedback-slide">
-                    <img src="https://saumiccraft.com/wp-content/uploads/2023/07/wp1-461x1024.jpg" alt="Customer Feedback Image 2" />
-                    {/* <p>Customer feedback text goes here.</p> */}
-                </div>  
+              
                 
             </div>
         </section>
